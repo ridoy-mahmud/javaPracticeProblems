@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 class fibo {
-    int fibonacci(int n) {
+    void fibonacci(int n) {
         int a = 0, b = 1, sum = 0;
+        System.out.print("1 ");
         for (int i = 1; i <= n; i++) {
             sum = a + b;
+            System.out.print(sum + " ");
             a = b;
             b = sum;
         }
-        return sum - 1;
     }
 }
 
@@ -18,7 +19,6 @@ public class fibonacciSeries {
         System.out.print("Enter a Number - ");
         int x = sc.nextInt();
         fibo fb = new fibo();
-        int res = fb.fibonacci(x);
-        System.out.println("The Sum of the Fibonacci Series is - " + res);
+        fb.fibonacci(x);
     }
 }
